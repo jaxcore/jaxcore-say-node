@@ -1,0 +1,22 @@
+{
+  "name": "jaxcore-say-node",
+  "version": "0.0.1",
+  "description": "NodeJS speech synthesis library",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaxcore/jaxcore-say-node"
+  },
+  "homepage": "https://github.com/jaxcore/jaxcore-say-node",
+  "author": "Dan Steinman",
+  "license": "GPL-3.0",
+  "devDependencies": {},
+  "dependencies": {
+    "pcm-convert": "^1.6.5",
+    "speaker": "^0.5.1"
+  }
+}
