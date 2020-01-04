@@ -18,16 +18,25 @@ For a version of Say which runs in web browsers and with more options and additi
 npm install jaxcore-say-node
 ```
 
-MacOS X users will also have to install an alternative speaker backend:
+Install the `speaker` module:
+
+```
+npm install speaker
+```
+
+MacOS X users will also have to install an alternative `speaker` backend:
 
 ```
 npm install speaker --mpg123-backend=openal --no-save
 ```
 
+Because `speaker` is a peer dependency it will have to be manually added to any project that uses `jaxcore-say-node`.
+
 ### Usage
 
 ```
 const Say = require('jaxcore-say-node');
+Say.speaker = require('speaker');
 
 var voice = new Say({
 	language: 'en',
