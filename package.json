@@ -1,6 +1,6 @@
 {
   "name": "jaxcore-say-node",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "NodeJS speech synthesis library",
   "main": "index.js",
   "directories": {
@@ -16,7 +16,9 @@
   "license": "GPL-3.0",
   "devDependencies": {},
   "dependencies": {
-    "pcm-convert": "^1.6.5",
+    "pcm-convert": "^1.6.5"
+  },
+  "peerDependencies": {
     "speaker": "^0.5.1"
   }
 }
