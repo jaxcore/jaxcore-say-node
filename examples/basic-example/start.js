@@ -1,8 +1,11 @@
 const Say = require('../../');
 
 var voice = new Say({
-	language: 'en',
+	language: 'en-us',
 	profile: 'Jack'
 });
 
-voice.say("hello world");
+console.log('Saying "hello world" ...');
+voice.say("hello world").then(() => {
+	console.log('done');
+});

@@ -45,12 +45,24 @@ voices.sam = new Say({
 function playNext(list) {
 	if (list.length) {
 		let name = list.shift();
-		voices[name].say("Hello World");
-		setTimeout(function() {
+		
+		// Change how the voices sound by setting the options:
+		let options = {
+			// fast: true,
+			// slow: true,
+			// high: true,
+			// low: true,
+			// amplitude: 100,
+			// wordgap: 10
+		};
+		
+		let text = "hello, I am "+name;
+		console.log(text);
+		
+		voices[name].say(text, options).then(function() {
 			playNext(list);
-		},1000);
+		});
 	}
 }
 
-let v = Object.keys(voices);
-playNext(v);
+playNext(Object.keys(voices));

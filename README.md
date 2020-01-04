@@ -18,6 +18,12 @@ For a version of Say which runs in web browsers and with more options and additi
 npm install jaxcore-say-node
 ```
 
+MacOS X users will also have to install an alternative speaker backend:
+
+```
+npm install speaker --mpg123-backend=openal --no-save
+```
+
 ### Usage
 
 ```
