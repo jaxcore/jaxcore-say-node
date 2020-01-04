@@ -1,6 +1,6 @@
 {
   "name": "jaxcore-say-node",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NodeJS speech synthesis library",
   "main": "index.js",
   "directories": {

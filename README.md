@@ -34,8 +34,10 @@ var voice = new Say({
 	profile: 'Jack'
 });
 
-voice.say("hello world"); // should hear "hello world" spoken 
-                         // in a robotic synthetic voice
+// say "hello world" through the speakers
+voice.say("hello world").then(function() {
+   // done
+});
 ```
 
 ### Voice Profiles
