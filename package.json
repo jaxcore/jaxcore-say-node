@@ -16,7 +16,8 @@
   "license": "GPL-3.0",
   "devDependencies": {},
   "dependencies": {
-    "pcm-convert": "^1.6.5"
+    "pcm-convert": "^1.6.5",
+    "pcm-volume": "^1.0.0"
   },
   "peerDependencies": {
     "speaker": "^0.5.1"

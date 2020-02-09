@@ -1,5 +1,5 @@
 const Say = require('../../');
-// Say.speaker = require('speaker');
+Say.speaker = require('speaker');
 
 const voices = {};
 
@@ -59,6 +59,8 @@ function playNext(list) {
 		
 		let text = "hello, I am "+name;
 		console.log(text);
+		
+		voices[name].setVolume(0.5);
 		
 		voices[name].say(text, options).then(function() {
 			playNext(list);
