@@ -11,37 +11,37 @@ voices.pris = new Say({
 	language: 'en',
 	profile: 'Pris'
 });
-voices.roy = new Say({
-	language: 'en',
-	profile: 'Roy'
-});
-voices.scotty = new Say({
-	language: 'en',
-	profile: 'Scotty'
-});
-voices.xenu = new Say({
-	language: 'en',
-	profile: 'Xenu'
-});
-voices.cylon = new Say({
-	language: 'en',
-	profile: 'Cylon'
-});
-voices.leon = new Say({
-	language: 'en',
-	profile: 'Leon'
-});
-voices.rachel = new Say({
-	language: 'en',
-	profile: 'Rachel'
-});
-voices.zhora = new Say({
-	language: 'en',
-	profile: 'Zhora'
-});
-voices.sam = new Say({
-	profile: 'Sam'
-});
+// voices.roy = new Say({
+// 	language: 'en',
+// 	profile: 'Roy'
+// });
+// voices.scotty = new Say({
+// 	language: 'en',
+// 	profile: 'Scotty'
+// });
+// voices.xenu = new Say({
+// 	language: 'en',
+// 	profile: 'Xenu'
+// });
+// voices.cylon = new Say({
+// 	language: 'en',
+// 	profile: 'Cylon'
+// });
+// voices.leon = new Say({
+// 	language: 'en',
+// 	profile: 'Leon'
+// });
+// voices.rachel = new Say({
+// 	language: 'en',
+// 	profile: 'Rachel'
+// });
+// voices.zhora = new Say({
+// 	language: 'en',
+// 	profile: 'Zhora'
+// });
+// voices.sam = new Say({
+// 	profile: 'Sam'
+// });
 
 function playNext(list) {
 	if (list.length) {
@@ -64,6 +64,24 @@ function playNext(list) {
 		
 		voices[name].say(text, options).then(function() {
 			playNext(list);
+		});
+	}
+	else {
+		
+		const borg = new Say({
+			profile: 'Jack'
+		});
+		
+		const text = 'Hello';
+		console.log(text);
+		
+		// replacements option:
+		// the audio generated for "hello" or "bonjour" will be converted to "goodbye"
+		
+		borg.say(text, {
+			replacements: {
+				"goodbye": "hello|bonjour"
+			}
 		});
 	}
 }

@@ -15,22 +15,14 @@ For a version of Say which runs in web browsers and with more options and additi
 ### Installation (NPM module)
 
 ```
-npm install jaxcore-say-node
+npm install jaxcore-say-node --mpg123-backend=openal
 ```
 
-Install the `speaker` module:
+In any NodeJS project that depends on this module, you will need to use the ` --mpg123-backend=openal` option for MacOSX support.
 
 ```
-npm install speaker
+npm install --mpg123-backend=openal
 ```
-
-MacOS X users will also have to install an alternative `speaker` backend:
-
-```
-npm install speaker --mpg123-backend=openal --no-save
-```
-
-Because `speaker` is a peer dependency it will have to be manually added to any project that uses `jaxcore-say-node`.
 
 ### Usage
 
