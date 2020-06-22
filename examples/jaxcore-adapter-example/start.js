@@ -23,13 +23,20 @@ class SayAdapter extends Jaxcore.Adapter {
 	}
 }
 
+jaxcore.defineService('Say', 'sayNode', {
+	workerPaths: {
+		sam: __dirname + '/workerthreads/sam-workerthread.js',
+		espeak: __dirname + '/workerthreads/espeak-all-workerthread.js'
+	}
+});
+
 jaxcore.addAdapter('say-adapter', SayAdapter);
 
 jaxcore.defineAdapter('Say Example', {
 	adapterType: 'say-adapter',
-	services: {
-		sayNode: true
-	}
+	serviceProfiles: [
+		'Say'
+	]
 });
 
 jaxcore.connectAdapter(null, 'Say Example');
